@@ -16,15 +16,6 @@ name = gets.chomp
   students
 end
 
-#let's put all students into an array
-students = [
-{:name => "Hadi", :cohort => :september},
-{:name => "Karin", :cohort => :september},
-{:name => "James", :cohort => :september},
-{:name => "Sean", :cohort => :september},
-{:name =>"Fadie", :cohort => :september}
-]
-
 def print_header
 puts "The students of my cohort at Makers Academy"
 puts "--------------"
