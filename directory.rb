@@ -5,3 +5,6 @@ puts "Karin"
 puts "James"
 puts "Sean"
 puts "Fadie"
+print "Overall, we have "
+print 5
+puts " great students"
