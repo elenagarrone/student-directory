@@ -1,0 +1,7 @@
+puts "The students of my cohort at Makers Academy"
+puts "--------------"
+puts "Hadi"
+puts "Karin"
+puts "James"
+puts "Sean"
+puts "Fadie"
