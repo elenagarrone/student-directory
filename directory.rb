@@ -8,7 +8,7 @@ name = STDIN.gets.chomp
 #while the name is not empty, repeat this code
   while !name.empty? do
     #add the student hash to the array
-	@students << {:name => name, :cohort => :november}
+	add_student(name, :november)
 	puts "Now we have #{@students.length} students"
 	name = STDIN.gets.chomp
   end
