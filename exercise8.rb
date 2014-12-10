@@ -8,7 +8,10 @@ def input_students
   #while the name is not empty, repeat this code
   while !name.empty? do
     puts "In which cohort are you in?"
-    cohort = gets.chomp
+    cohort = gets.chomp.capitalize
+    cohort == "" ? cohort=:September : ""
+    cohort = check_spelling(cohort)
+
     puts "Can i ask your date of birth?"
     birth = gets.chomp
     #add the student hash to the array
@@ -18,6 +21,17 @@ def input_students
   end
   #return the array of students
   students
+end
+
+def check_spelling(cohort)
+  if cohort == 'January' || cohort == 'February' || cohort == 'March' || cohort == 'April' || cohort == 'May' || cohort == 'June'|| cohort == 'July' || cohort == 'August' || cohort == 'September' || cohort == 'October' || cohort == 'November' || cohort == 'December'
+     return cohort
+  else
+    puts 'Please enter again the name of the cohort, it was incorrect.'
+    re_entering_cohort = gets.chomp.capitalize
+    return check_spelling(re_entering_cohort)
+  end
+
 end
 
 def print_header
