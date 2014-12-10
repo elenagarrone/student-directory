@@ -17,9 +17,9 @@ def input_students
     #add the student hash to the array
     students << {:name => name, :cohort => cohort, :birth => birth}
     if students.length == 1
-      print "Now we have #{students.length} student\n"
+      puts "Now we have #{students.length} student"
     else
-      print "Now we have #{students.length} students\n"
+      puts "Now we have #{students.length} students"
     end
     name = gets.chomp
   end
@@ -27,9 +27,17 @@ def input_students
   students
 end
 
+def sort_by_cohort(students)
+  list_cohort = []
+  students.map do |student|
+    list_cohort << student[:cohort]
+  end
+  return list_cohort.uniq
+end
+
 def check_spelling(cohort)
   if cohort == 'January' || cohort == 'February' || cohort == 'March' || cohort == 'April' || cohort == 'May' || cohort == 'June'|| cohort == 'July' || cohort == 'August' || cohort == 'September' || cohort == 'October' || cohort == 'November' || cohort == 'December'
-     return cohort
+    return cohort
   else
     puts 'Please enter again the name of the cohort, it was incorrect.'
     re_entering_cohort = gets.chomp.capitalize
@@ -44,13 +52,22 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort. Date of birth: #{student[:birth]})"
+  cohorts = sort_by_cohort(students)
+  cohorts.each do |month|
+    students.each do |student|
+      if student[:cohort] == month
+        puts "#{student[:name]} (#{student[:cohort]} cohort. Date of birth: #{student[:birth]})"
+      end
+    end
   end
 end
 
 def print_footer(names)
-  puts "Overall, we have #{names.length} great students\n"
+  if names.length == 1
+    puts "Overall, we have #{names.length} great student"
+  else
+    puts "Overall, we have #{names.length} great students"
+  end
 end
 #nothing happens until we call the methods
 
