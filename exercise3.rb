@@ -22,7 +22,7 @@ end
 def print_students(students)
   print "The students starting with letter A are:\n"
   students.each do |student|
-    name_with_A = student[:name].split('')[0].capitalize.include?('A')
+    name_with_A = student[:name].chr.capitalize.include?('A')
     if name_with_A == true
       print "#{student[:name]} (#{student[:cohorts]} cohort)\n"
     end
