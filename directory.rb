@@ -9,7 +9,7 @@ name = STDIN.gets.chomp
   while !name.empty? do
     #add the student hash to the array
 	add_student(name, :november)
-	puts "Now we have #{@students.length} students"
+	puts "Now we have #{@students.length} students\n"
 	name = STDIN.gets.chomp
   end
  end
@@ -21,7 +21,7 @@ end
 
 def print_student_list
   @students.each_with_index do |student, index|
-  puts "#{1+index} #{student[:name]} (#{student[:cohort]} cohort)"       
+  puts "#{1+index} #{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
@@ -62,7 +62,7 @@ def process(selection)
       save_students
       when "4"
       load_students
-      when "9" 
+      when "9"
       exit #this will cause the program to terminate
       else
         puts "I don't know what you meant, try again"
@@ -86,10 +86,10 @@ def add_student(name, cohort)
 end
 
 def load_students(filename = "students.csv")
-  file = File.open(filename,"r")  
+  file = File.open(filename,"r")
   file.readlines.each do |line|
     name, cohort = line.chomp.split(',')
-    add_student(name, cohort) 
+    add_student(name, cohort)
   end
 file.close
 end

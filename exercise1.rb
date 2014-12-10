@@ -8,7 +8,7 @@ name = gets.chomp
   while !name.empty? do
     #add the student hash to the array
 	students << {:name => name, :cohort => :november}
-	print "Now we have #{students.length} students"
+	print "Now we have #{students.length} students\n"
 	name = gets.chomp
   end
   #return the array of students
