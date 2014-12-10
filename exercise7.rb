@@ -11,7 +11,7 @@ name = gets.chomp
     cohort = gets.chomp
     #add the student hash to the array
   students << {:name => name, :cohort => cohort}
-  puts "Now we have #{students.length} students".center(40)
+  puts "Now we have #{students.length} students\n".center(40)
   name = gets.chomp
   end
   #return the array of students
