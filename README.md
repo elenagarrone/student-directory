@@ -18,3 +18,7 @@ Load the file:
 ```shell
 $ ruby directory.rb
 ```
+To load the exercises:
+```shell
+$ ruby <name_of_the_file>.rb
+```
