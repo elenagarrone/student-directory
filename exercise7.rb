@@ -30,7 +30,7 @@ def print(students)
 end
 
 def print_footer(names)
-puts "Overall, we have #{names.length} great students".center(40)
+puts "Overall, we have #{names.length} great students\n".center(40)
 end
 #nothing happens until we call the methods
 

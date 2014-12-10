@@ -26,7 +26,7 @@ def print_students(students)
 end
 
 def print_footer(names)
-print "Overall, we have #{names.length} great students"
+print "Overall, we have #{names.length} great students\n"
 end
 #nothing happens until we call the methods
 

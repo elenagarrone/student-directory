@@ -26,7 +26,7 @@ def print_student_list
 end
 
 def print_footer
-puts "Overall, we have #{@students.length} great students"
+puts "Overall, we have #{@students.length} great students\n"
 end
 
 def interactive_menu
