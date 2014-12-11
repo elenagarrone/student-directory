@@ -1,5 +1,5 @@
 def input_students
-  print "Please enter the name of the students. \nTo finish, just hit return twice. \n"
+  puts "Please enter the name of the students. \nTo finish, just hit return twice."
   students = []
   name = gets.chomp
   while !name.empty? do
