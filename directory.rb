@@ -1,10 +1,10 @@
 @students = []
 
 def input_students
-puts "Please enter the name of the students"
-puts "To finish, just hit return twice"
+  puts "Please enter the name of the students"
+  puts "To finish, just hit return twice"
 
-name = STDIN.gets.chomp
+  name = STDIN.gets.chomp
 
   while !name.empty? do
   	add_student(name, :november)
