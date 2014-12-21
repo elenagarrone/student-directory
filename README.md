@@ -22,5 +22,5 @@ and follow the on-screen instructions.
 
 #####To load the exercises:
 ```shell
-$ ruby <name_of_the_file>.rb
+$ ruby exercises/<name_of_the_file>.rb
 ```
