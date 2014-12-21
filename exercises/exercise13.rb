@@ -30,7 +30,8 @@ def sort_by_cohort(students)
 end
 
 def check_spelling(cohort)
-  if cohort == 'January' || cohort == 'February' || cohort == 'March' || cohort == 'April' || cohort == 'May' || cohort == 'June'|| cohort == 'July' || cohort == 'August' || cohort == 'September' || cohort == 'October' || cohort == 'November' || cohort == 'December'
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  if months.include?(cohort)
     return cohort
   else
     puts 'Please enter again the name of the cohort, it was incorrect.'
