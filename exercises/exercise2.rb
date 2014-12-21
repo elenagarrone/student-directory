@@ -1,0 +1,1 @@
+puts "This exercise was done inside the directory.rb file"
