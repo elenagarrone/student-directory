@@ -3,9 +3,9 @@ def input_students
   students = []
   name = gets.chomp
   while !name.empty? do
-  	students << {:name => name, :cohort => :november}
-  	puts "Now we have #{students.length} students"
-  	name = gets.chomp
+    students << {:name => name, :cohort => :november}
+    puts "Now we have #{students.length} students"
+    name = gets.chomp
   end
   students
 end
